@@ -33,7 +33,8 @@ $db_lnnavi = ''; # Na'vi word column
 // eng, de, pl, est, hu, sv, nl and ru (ru = russian will show no words only ???, so don't use it)
 $lang = "'eng'";
 // One html to rule them all!
-$vblock = '<div style="width: 100%; padding-left: 0.7em; -moz-column-count: 2; -webkit-column-count: 2; column-count: 2; -moz-column-width: 49%; -webkit-column-width: 49%; column-width: 49%; -moz-column-gap: 2em; -webkit-column-gap: 2em; column-gap: 2em;">';
+$dblock = '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">';
+$vblock = '</span></p><div style="width: 100%; padding-left: 0.7em; -moz-column-count: 2; -webkit-column-count: 2; column-count: 2; -moz-column-width: 49%; -webkit-column-width: 49%; column-width: 49%; -moz-column-gap: 2em; -webkit-column-gap: 2em; column-gap: 2em;">';
 // So, all necessary things are done now...
 // ...let's connect to the db!
 $db_link = mysqli_connect($db_loca ,$db_user ,$db_pass ,$db_name);
@@ -73,7 +74,7 @@ function ayliu()
 ##################### THE GENERATOR #####################
 // tìftang!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">’ [ʔ] (<em>tìftang, Apostrophe, Glottal Stop</em>)</span></p>', $vblock;
+echo $dblock, '’ [ʔ] (<em>tìftang, Apostrophe, Glottal Stop</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
@@ -84,342 +85,286 @@ foreach ($vocab as $data2)
 echo '</div>';
 // a!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">A [a]</span></p>', $vblock;
+echo $dblock, 'A [a]', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'a')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'A')
+	if (substr($data2['navi'], 0, 1) == 'a' || substr($data2['navi'], 0, 1) == 'A')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // ä!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">Ä [æ]</span></p>', $vblock;
+echo $dblock, 'Ä [æ]', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 2) == 'ä')
-		ayliu();
-	if (substr($data2['navi'], 0, 2) == 'Ä')
+	if (substr($data2['navi'], 0, 2) == 'ä' || substr($data2['navi'], 0, 2) == 'Ä')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // e!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">E [ɛ]</span></p>', $vblock;
+echo $dblock, 'E [ɛ]', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'e')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'E')
+	if (substr($data2['navi'], 0, 1) == 'e' || substr($data2['navi'], 0, 1) == 'E')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // f!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">F [f] (<em>Fä</em>)</span></p>', $vblock;
+echo $dblock, 'F [f] (<em>Fä</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'f')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'F')
+	if (substr($data2['navi'], 0, 1) == 'f' || substr($data2['navi'], 0, 1) == 'F')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // h!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">H [h] (<em>Hä</em>)</span></p>', $vblock;
+echo $dblock, 'H [h] (<em>Hä</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'h')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'H')
+	if (substr($data2['navi'], 0, 1) == 'h' || substr($data2['navi'], 0, 1) == 'H')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // i!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">I [i]</span></p>', $vblock;
+echo $dblock, 'I [i]', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'i')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'I')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'j')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'J')
+	if (substr($data2['navi'], 0, 1) == 'i' || substr($data2['navi'], 0, 1) == 'I' || substr($data2['navi'], 0, 1) == 'j' || substr($data2['navi'], 0, 1) == 'J')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // ì!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">Ì [ɪ]</span></p>', $vblock;
+echo $dblock, 'Ì [ɪ]', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 2) == 'ì')
-		ayliu();
-	if (substr($data2['navi'], 0, 2) == 'Ì')
+	if (substr($data2['navi'], 0, 2) == 'ì' || substr($data2['navi'], 0, 2) == 'Ì')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // k!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">K [k] (<em>KeK</em>)</span></p>', $vblock;
+echo $dblock, 'K [k] (<em>KeK</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'k' && substr($data2['navi'], 0, 2) != 'kx')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'K' && substr($data2['navi'], 0, 2) != 'Kx')
+	if (substr($data2['navi'], 0, 1) == 'k' && substr($data2['navi'], 0, 2) != 'kx' || substr($data2['navi'], 0, 1) == 'K' && substr($data2['navi'], 0, 2) != 'Kx')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // kx!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">KX [k’] (<em>KxeKx</em>)</span></p>', $vblock;
+echo $dblock, 'KX [k’] (<em>KxeKx</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 2) == 'kx')
-		ayliu();
-	if (substr($data2['navi'], 0, 2) == 'Kx')
+	if (substr($data2['navi'], 0, 2) == 'kx' || substr($data2['navi'], 0, 2) == 'Kx')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // l!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">L [l] (<em>LeL</em>)</span></p>', $vblock;
+echo $dblock, 'L [l] (<em>LeL</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'l')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'L')
+	if (substr($data2['navi'], 0, 1) == 'l' || substr($data2['navi'], 0, 1) == 'L')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // m!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">M [m] (<em>MeM</em>)</span></p>', $vblock;
+echo $dblock, 'M [m] (<em>MeM</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'm')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'M')
+	if (substr($data2['navi'], 0, 1) == 'm' || substr($data2['navi'], 0, 1) == 'M')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // n!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">N [n] (<em>NeN</em>)</span></p>', $vblock;
+echo $dblock, 'N [n] (<em>NeN</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'n' && substr($data2['navi'], 0, 2) != 'ng')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'N' && substr($data2['navi'], 0, 2) != 'Ng')
+	if (substr($data2['navi'], 0, 1) == 'n' && substr($data2['navi'], 0, 2) != 'ng' || substr($data2['navi'], 0, 1) == 'N' && substr($data2['navi'], 0, 2) != 'Ng')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // ng!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">NG [ŋ] (<em>NgeNg</em>)</span></p>', $vblock;
+echo $dblock, 'NG [ŋ] (<em>NgeNg</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 2) == 'ng')
-		ayliu();
-	if (substr($data2['navi'], 0, 2) == 'Ng')
+	if (substr($data2['navi'], 0, 2) == 'ng' || substr($data2['navi'], 0, 2) == 'Ng')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // o!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">O [o]</span></p>', $vblock;
+echo $dblock, 'O [o]', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'o')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'O')
+	if (substr($data2['navi'], 0, 1) == 'o' || substr($data2['navi'], 0, 1) == 'O')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // p!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">P [p] (<em>PeP</em>)</span></p>', $vblock;
+echo $dblock, 'P [p] (<em>PeP</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'p' && substr($data2['navi'], 0, 2) != 'px')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'P' && substr($data2['navi'], 0, 2) != 'Px')
+	if (substr($data2['navi'], 0, 1) == 'p' && substr($data2['navi'], 0, 2) != 'px' || substr($data2['navi'], 0, 1) == 'P' && substr($data2['navi'], 0, 2) != 'Px')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // px!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">PX [p’] (<em>PxePx</em>)</span></p>', $vblock;
+echo $dblock, 'PX [p’] (<em>PxePx</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 2) == 'px')
-		ayliu();
-	if (substr($data2['navi'], 0, 2) == 'Px')
+	if (substr($data2['navi'], 0, 2) == 'px' || substr($data2['navi'], 0, 2) == 'Px')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // r!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">R [ɾ] (<em>ReR</em>)</span></p>', $vblock;
+echo $dblock, 'R [ɾ] (<em>ReR</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'r')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'R')
+	if (substr($data2['navi'], 0, 1) == 'r' || substr($data2['navi'], 0, 1) == 'R')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // s!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">S [s] (<em>Sä</em>)</span></p>', $vblock;
+echo $dblock, 'S [s] (<em>Sä</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 's')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'S')
+	if (substr($data2['navi'], 0, 1) == 's' || substr($data2['navi'], 0, 1) == 'S')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // t!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">T [t] (<em>TeT</em>)</span></p>', $vblock;
+echo $dblock, 'T [t] (<em>TeT</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 't' && substr($data2['navi'], 0, 2) != 'tx' && substr($data2['navi'], 0, 2) != 'ts')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'T' && substr($data2['navi'], 0, 2) != 'Tx' && substr($data2['navi'], 0, 2) != 'Ts')
+	if (substr($data2['navi'], 0, 1) == 't' && substr($data2['navi'], 0, 2) != 'tx' && substr($data2['navi'], 0, 2) != 'ts' || substr($data2['navi'], 0, 1) == 'T' && substr($data2['navi'], 0, 2) != 'Tx' && substr($data2['navi'], 0, 2) != 'Ts')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // ts!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">TS [t͡s] (<em>Tsä</em>)</span></p>', $vblock;
+echo $dblock, 'TS [t͡s] (<em>Tsä</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 2) == 'ts' && substr($data2['navi'], 0, 2) != 'tx')
-		ayliu();
-	if (substr($data2['navi'], 0, 2) == 'Ts' && substr($data2['navi'], 0, 2) != 'Tx')
+	if (substr($data2['navi'], 0, 2) == 'ts' && substr($data2['navi'], 0, 2) != 'tx' || substr($data2['navi'], 0, 2) == 'Ts' && substr($data2['navi'], 0, 2) != 'Tx')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // tx!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">TX [t’] (<em>TxeTx</em>)</span></p>', $vblock;
+echo $dblock, 'TX [t’] (<em>TxeTx</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 2) == 'tx' && substr($data2['navi'], 0, 2) != 'ts')
-		ayliu();
-	if (substr($data2['navi'], 0, 2) == 'Tx' && substr($data2['navi'], 0, 2) != 'Ts')
+	if (substr($data2['navi'], 0, 2) == 'tx' && substr($data2['navi'], 0, 2) != 'ts' || substr($data2['navi'], 0, 2) == 'Tx' && substr($data2['navi'], 0, 2) != 'Ts')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // u!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">U [u|ʊ]</span></p>', $vblock;
+echo $dblock, 'U [u|ʊ]', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'u')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'U')
+	if (substr($data2['navi'], 0, 1) == 'u' || substr($data2['navi'], 0, 1) == 'U')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // v!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">V [v] (<em>Vä</em>)</span></p>', $vblock;
+echo $dblock, 'V [v] (<em>Vä</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'v')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'V')
+	if (substr($data2['navi'], 0, 1) == 'v' || substr($data2['navi'], 0, 1) == 'V')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // w!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">W [w] (<em>Wä</em>)</span></p>', $vblock;
+echo $dblock, 'W [w] (<em>Wä</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'w')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'W')
+	if (substr($data2['navi'], 0, 1) == 'w' || substr($data2['navi'], 0, 1) == 'W')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // y!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">Y [j] (<em>Yä</em>)</span></p>', $vblock;
+echo $dblock, 'Y [j] (<em>Yä</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'y')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'Y')
+	if (substr($data2['navi'], 0, 1) == 'y' || substr($data2['navi'], 0, 1) == 'Y')
 		ayliu();
 }
 // just to close the <div>
 echo '</div>';
 // z!
 // Vocab block title
-echo '<p style="margin: 2em 0 1em 0; text-align: center;"><span style="font-size: 1.2em;">Z [z] (<em>Zä</em>)</span></p>', $vblock;
+echo $dblock, 'Z [z] (<em>Zä</em>)', $vblock;
 // the thing that reads the stuff from the db
 foreach ($vocab as $data2)
 {
-	if (substr($data2['navi'], 0, 1) == 'z')
-		ayliu();
-	if (substr($data2['navi'], 0, 1) == 'Z')
+	if (substr($data2['navi'], 0, 1) == 'z' || substr($data2['navi'], 0, 1) == 'Z')
 		ayliu();
 }
 // just to close the <div>
